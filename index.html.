@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVERYTHING ABOUT YOU</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#130c18;color:#fff0f5;font-family:Arial,sans-serif;text-align:center;min-height:100vh}
+header{padding:25px 12px;background:#261126;border-bottom:2px solid #b64c80}
+h1{font-size:clamp(25px,7vw,42px);color:#ff8fbd;margin:10px 0}
+main{max-width:650px;margin:auto;padding:20px}
+.card{background:#281a2c;border:1px solid #70405f;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 8px 25px #0005}
+.avatar{font-size:85px;margin:10px}
+p{line-height:1.7;color:#f5dce9}
+button{display:block;width:100%;padding:14px;margin:12px 0;border:1px solid #ff9bc7;border-radius:12px;background:#572744;color:white;font-size:16px;cursor:pointer}
+button:hover{background:#85385f}
+input{width:100%;padding:13px;border-radius:10px;border:1px solid #b64c80;background:#160f1b;color:white;font-size:16px}
+.small{font-size:13px;color:#c9a9bc}
+</style>
+</head>
+<body>
+<header>
+<h1>EVERYTHING ABOUT YOU</h1>
+<p>A dark romance story 💗</p>
+</header>
+<main>
+<section class="card" id="game">
+<div class="avatar">🌙</div>
+<h2>Make your character</h2>
+<p>Every choice changes your story.</p>
+<input id="player" placeholder="Your character's name">
+<button onclick="start()">Begin your story</button>
+</section>
+</main>
+<script>
+const game=document.getElementById("game");
+let name="You";
+function show(title,emoji,text,choices){
+game.innerHTML='<div class="avatar">'+emoji+'</div><h2>'+title+'</h2><p>'+text+'</p>';
+choices.forEach(c=>{
+const b=document.createElement("button");
+b.textContent=c[0];
+b.onclick=c[1];
+game.appendChild(b);
+});
+}
+function start(){
+name=document.getElementById("player").value.trim()||"You";
+chapter1();
+}
+function chapter1(){
+show("The first message","💌",
+"After school, "+name+" receives a message from their crush, Alex. \"I've been thinking about you all day.\" Your heart races. What do you do?",
+[
+["Reply sweetly 💗",chapter2],
+["Ask why Alex is thinking about me 👀",chapter3],
+["Wait before replying 🌙",chapter4]
+]);
+}
+function chapter2(){
+show("Getting closer","💕",
+"Alex starts sharing secrets with you and asks to spend more time together. But you notice Alex gets jealous when you talk to other people.",
+[
+["Talk honestly about jealousy",healthy],
+["Think jealousy proves love",danger],
+["Ask for some space",spaceEnding]
+]);
+}
+function chapter3(){
+show("A strange confession","🖤",
+"Alex says, \"I get scared that I'll lose you.\" It sounds honest, but you wonder what Alex expects from you.",
+[
+["Set clear boundaries",healthy],
+["Promise never to talk to anyone else",danger],
+["Ask Alex what they are afraid of",talkEnding]
+]);
+}
+function chapter4(){
+show("The next day","🌧️",
+"Alex sees you at school and looks nervous. \"Did I do something wrong?\" Alex asks.",
+[
+["Explain you were busy",talkEnding],
+["Ignore Alex to make them jealous",danger],
+["Tell Alex you like them too",chapter2]
+]);
+}
+function healthy(){
+show("Ending: Healthy Love","🌷",
+"You and Alex talk honestly. You learn that love means trust, respect and having your own lives. Your relationship begins with care instead of control.",
+[["Play again ↻",()=>location.reload()]]);
+}
+function danger(){
+show("Ending: Dangerous Obsession","🥀",
+"Jealousy begins controlling every choice. You realize that love should never mean fear, isolation or ownership. You decide to protect your freedom and seek support.",
+[["Try a different path ↻",()=>location.reload()]]);
+}
+function spaceEnding(){
+show("Ending: Finding Yourself","🌙",
+"You ask for space, and Alex learns that closeness needs boundaries. You focus on yourself and decide what kind of relationship feels right.",
+[["Play again ↻",()=>location.reload()]]);
+}
+function talkEnding(){
+show("Ending: An Honest Conversation","💞",
+"You both speak honestly about your fears. Nothing is perfect, but you choose to listen, respect boundaries and take things slowly.",
+[["Play again ↻",()=>location.reload()]]);
+}
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVERYTHING ABOUT YOU</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#130c18;color:#fff0f5;font-family:Arial,sans-serif;text-align:center;min-height:100vh}
+header{padding:25px 12px;background:#261126;border-bottom:2px solid #b64c80}
+h1{font-size:clamp(25px,7vw,42px);color:#ff8fbd;margin:10px 0}
+main{max-width:650px;margin:auto;padding:20px}
+.card{background:#281a2c;border:1px solid #70405f;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 8px 25px #0005}
+.avatar{font-size:85px;margin:10px}
+p{line-height:1.7;color:#f5dce9}
+button{display:block;width:100%;padding:14px;margin:12px 0;border:1px solid #ff9bc7;border-radius:12px;background:#572744;color:white;font-size:16px;cursor:pointer}
+button:hover{background:#85385f}
+input{width:100%;padding:13px;border-radius:10px;border:1px solid #b64c80;background:#160f1b;color:white;font-size:16px}
+.small{font-size:13px;color:#c9a9bc}
+</style>
+</head>
+<body>
+<header>
+<h1>EVERYTHING ABOUT YOU</h1>
+<p>A dark romance story 💗</p>
+</header>
+<main>
+<section class="card" id="game">
+<div class="avatar">🌙</div>
+<h2>Make your character</h2>
+<p>Every choice changes your story.</p>
+<input id="player" placeholder="Your character's name">
+<button onclick="start()">Begin your story</button>
+</section>
+</main>
+<script>
+const game=document.getElementById("game");
+let name="You";
+function show(title,emoji,text,choices){
+game.innerHTML='<div class="avatar">'+emoji+'</div><h2>'+title+'</h2><p>'+text+'</p>';
+choices.forEach(c=>{
+const b=document.createElement("button");
+b.textContent=c[0];
+b.onclick=c[1];
+game.appendChild(b);
+});
+}
+function start(){
+name=document.getElementById("player").value.trim()||"You";
+chapter1();
+}
+function chapter1(){
+show("The first message","💌",
+"After school, "+name+" receives a message from their crush, Alex. \"I've been thinking about you all day.\" Your heart races. What do you do?",
+[
+["Reply sweetly 💗",chapter2],
+["Ask why Alex is thinking about me 👀",chapter3],
+["Wait before replying 🌙",chapter4]
+]);
+}
+function chapter2(){
+show("Getting closer","💕",
+"Alex starts sharing secrets with you and asks to spend more time together. But you notice Alex gets jealous when you talk to other people.",
+[
+["Talk honestly about jealousy",healthy],
+["Think jealousy proves love",danger],
+["Ask for some space",spaceEnding]
+]);
+}
+function chapter3(){
+show("A strange confession","🖤",
+"Alex says, \"I get scared that I'll lose you.\" It sounds honest, but you wonder what Alex expects from you.",
+[
+["Set clear boundaries",healthy],
+["Promise never to talk to anyone else",danger],
+["Ask Alex what they are afraid of",talkEnding]
+]);
+}
+function chapter4(){
+show("The next day","🌧️",
+"Alex sees you at school and looks nervous. \"Did I do something wrong?\" Alex asks.",
+[
+["Explain you were busy",talkEnding],
+["Ignore Alex to make them jealous",danger],
+["Tell Alex you like them too",chapter2]
+]);
+}
+function healthy(){
+show("Ending: Healthy Love","🌷",
+"You and Alex talk honestly. You learn that love means trust, respect and having your own lives. Your relationship begins with care instead of control.",
+[["Play again ↻",()=>location.reload()]]);
+}
+function danger(){
+show("Ending: Dangerous Obsession","🥀",
+"Jealousy begins controlling every choice. You realize that love should never mean fear, isolation or ownership. You decide to protect your freedom and seek support.",
+[["Try a different path ↻",()=>location.reload()]]);
+}
+function spaceEnding(){
+show("Ending: Finding Yourself","🌙",
+"You ask for space, and Alex learns that closeness needs boundaries. You focus on yourself and decide what kind of relationship feels right.",
+[["Play again ↻",()=>location.reload()]]);
+}
+function talkEnding(){
+show("Ending: An Honest Conversation","💞",
+"You both speak honestly about your fears. Nothing is perfect, but you choose to listen, respect boundaries and take things slowly.",
+[["Play again ↻",()=>location.reload()]]);
+}
+</script>
+</body>
+</html>
+￼Enter
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVERYTHING ABOUT YOU</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#130c18;color:#fff0f5;font-family:Arial,sans-serif;text-align:center;min-height:100vh}
+header{padding:25px 12px;background:#261126;border-bottom:2px solid #b64c80}
+h1{font-size:clamp(25px,7vw,42px);color:#ff8fbd;margin:10px 0}
+main{max-width:650px;margin:auto;padding:20px}
+.card{background:#281a2c;border:1px solid #70405f;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 8px 25px #0005}
+.avatar{font-size:85px;margin:10px}
+p{line-height:1.7;color:#f5dce9}
+button{display:block;width:100%;padding:14px;margin:12px 0;border:1px solid #ff9bc7;border-radius:12px;background:#572744;color:white;font-size:16px;cursor:pointer}
+button:hover{background:#85385f}
+input{width:100%;padding:13px;border-radius:10px;border:1px solid #b64c80;background:#160f1b;color:white;font-size:16px}
+.small{font-size:13px;color:#c9a9bc}
+</style>
+</head>
+<body>
+<header>
+<h1>EVERYTHING ABOUT YOU</h1>
+<p>A dark romance story 💗</p>
+</header>
+<main>
+<section class="card" id="game">
+<div class="avatar">🌙</div>
+<h2>Make your character</h2>
+<p>Every choice changes your story.</p>
+<input id="player" placeholder="Your character's name">
+<button onclick="start()">Begin your story</button>
+</section>
+</main>
+<script>
+const game=document.getElementById("game");
+let name="You";
+function show(title,emoji,text,choices){
+game.innerHTML='<div class="avatar">'+emoji+'</div><h2>'+title+'</h2><p>'+text+'</p>';
+choices.forEach(c=>{
+const b=document.createElement("button");
+b.textContent=c[0];
+b.onclick=c[1];
+game.appendChild(b);
+});
+}
+function start(){
+name=document.getElementById("player").value.trim()||"You";
+chapter1();
+}
+function chapter1(){
+show("The first message","💌",
+"After school, "+name+" receives a message from their crush, Alex. \"I've been thinking about you all day.\" Your heart races. What do you do?",
+[
+["Reply sweetly 💗",chapter2],
+["Ask why Alex is thinking about me 👀",chapter3],
+["Wait before replying 🌙",chapter4]
+]);
+}
+function chapter2(){
+show("Getting closer","💕",
+"Alex starts sharing secrets with you and asks to spend more time together. But you notice Alex gets jealous when you talk to other people.",
+[
+["Talk honestly about jealousy",healthy],
+["Think jealousy proves love",danger],
+["Ask for some space",spaceEnding]
+]);
+}
+function chapter3(){
+show("A strange confession","🖤",
+"Alex says, \"I get scared that I'll lose you.\" It sounds honest, but you wonder what Alex expects from you.",
+[
+["Set clear boundaries",healthy],
+["Promise never to talk to anyone else",danger],
+["Ask Alex what they are afraid of",talkEnding]
+]);
+}
+function chapter4(){
+show("The next day","🌧️",
+"Alex sees you at school and looks nervous. \"Did I do something wrong?\" Alex asks.",
+[
+["Explain you were busy",talkEnding],
+["Ignore Alex to make them jealous",danger],
+["Tell Alex you like them too",chapter2]
+]);
+}
+function healthy(){
+show("Ending: Healthy Love","🌷",
+"You and Alex talk honestly. You learn that love means trust, respect and having your own lives. Your relationship begins with care instead of control.",
+[["Play again ↻",()=>location.reload()]]);
+}
+function danger(){
+show("Ending: Dangerous Obsession","🥀",
+"Jealousy begins controlling every choice. You realize that love should never mean fear, isolation or ownership. You decide to protect your freedom and seek support.",
+[["Try a different path ↻",()=>location.reload()]]);
+}
+function spaceEnding(){
+show("Ending: Finding Yourself","🌙",
+"You ask for space, and Alex learns that closeness needs boundaries. You focus on yourself and decide what kind of relationship feels right.",
+[["Play again ↻",()=>location.reload()]]);
+}
+function talkEnding(){
+show("Ending: An Honest Conversation","💞",
+"You both speak honestly about your fears. Nothing is perfect, but you choose to listen, respect boundaries and take things slowly.",
+[["Play again ↻",()=>location.reload()]]);
+}
+</script>
+</body>
+</html>
+￼Enter
