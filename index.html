@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EVERYTHING ABOUT YOU</title>
+<style>
+body {
+  margin: 0;
+  background: #160d18;
+  color: #ffe8f1;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 24px 16px;
+}
+.card {
+  max-width: 480px;
+  margin: 25px auto;
+  padding: 24px;
+  background: #2b182b;
+  border: 1px solid #a64d78;
+  border-radius: 20px;
+}
+h1 { color: #ff8cbd; }
+button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #d95791;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover { background: #ef79ae; }
+#story { line-height: 1.7; white-space: pre-line; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>EVERYTHING ABOUT YOU</h1>
+  <p>A dark romance story</p>
+  <h3 id="chapter">Chapter 1: The New Message</h3>
+  <p id="story">Your phone lights up at midnight.
+
+A message from your crush appears:
+
+"I saw you today. You looked beautiful."
+
+You smile. Then another message arrives.
+
+"Who were you talking to after class?"</p>
+  <div id="choices">
+    <button onclick="choose(1)">Reply sweetly ❤️</button>
+    <button onclick="choose(2)">Ask why they want to know 👀</button>
+    <button onclick="choose(3)">Ignore the message 🌙</button>
+  </div>
+  <p id="ending"></p>
+</div>
+<script>
+function choose(n) {
+  const story = document.getElementById("story");
+  const chapter = document.getElementById("chapter");
+  const choices = document.getElementById("choices");
+  const ending = document.getElementById("ending");
+
+  if (n === 1) {
+    chapter.textContent = "Chapter 2: Getting Closer";
+    story.textContent = "You reply with a heart. They answer immediately.\\n\\n'I just care about you. I want to be the person you tell everything to.'\\n\\nYou feel excited, but a little unsure.";
+    choices.innerHTML = '<button onclick="choose(4)">Tell them how you feel 💗</button><button onclick="choose(5)">Set a boundary 🌷</button>';
+  } else if (n === 2) {
+    chapter.textContent = "Chapter 2: The Question";
+    story.textContent = "You ask why they want to know.\\n\\n'Because I like you,' they reply. 'But I know you can choose who you talk to.'\\n\\nYou wonder if you can trust them.";
+    choices.innerHTML = '<button onclick="choose(4)">Give them a chance 💕</button><button onclick="choose(5)">Take things slowly 🌙</button>';
+  } else if (n === 3) {
+    chapter.textContent = "Chapter 2: Silence";
+    story.textContent = "You put your phone away. The next morning, they apologize for being nosy.\\n\\n'I should trust you instead of questioning you,' they say.";
+    choices.innerHTML = '<button onclick="choose(5)">Talk honestly 💗</button><button onclick="choose(6)">Keep your distance 🌑</button>';
+  } else if (n === 4) {
+    chapter.textContent = "Your Ending";
+    story.textContent = "You open your heart and agree to learn about each other. You promise to be honest and respect each other's freedom.";
+    choices.innerHTML = '<button onclick="location.reload()">Play Again ↻</button>';
+    ending.textContent = "💕 A new beginning";
+  } else if (n === 5) {
+    chapter.textContent = "Your Ending";
+    story.textContent = "You explain that love needs trust, space, and respect. They listen. Together, you decide to build something healthier.";
+    choices.innerHTML = '<button onclick="location.reload()">Play Again ↻</button>';
+    ending.textContent = "🌷 Healthy Love Ending";
+  } else {
+    chapter.textContent = "Your Ending";
+    story.textContent = "You decide you need space. It hurts, but you choose your peace and leave room for a better future.";
+    choices.innerHTML = '<button onclick="location.reload()">Play Again ↻</button>';
+    ending.textContent = "🌙 Choosing Yourself Ending";
+  }
+}
+</script>
+</body>
+</html>
+￼Enter
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EVERYTHING ABOUT YOU</title>
+<style>
+body {
+  margin: 0;
+  background: #160d18;
+  color: #ffe8f1;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 24px 16px;
+}
+.card {
+  max-width: 480px;
+  margin: 25px auto;
+  padding: 24px;
+  background: #2b182b;
+  border: 1px solid #a64d78;
+  border-radius: 20px;
+}
+h1 { color: #ff8cbd; }
+button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #d95791;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover { background: #ef79ae; }
+#story { line-height: 1.7; white-space: pre-line; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>EVERYTHING ABOUT YOU</h1>
+  <p>A dark romance story</p>
+  <h3 id="chapter">Chapter 1: The New Message</h3>
+  <p id="story">Your phone lights up at midnight.
+
+A message from your crush appears:
+
+"I saw you today. You looked beautiful."
+
+You smile. Then another message arrives.
+
+"Who were you talking to after class?"</p>
+  <div id="choices">
+    <button onclick="choose(1)">Reply sweetly ❤️</button>
+    <button onclick="choose(2)">Ask why they want to know 👀</button>
+    <button onclick="choose(3)">Ignore the message 🌙</button>
+  </div>
+  <p id="ending"></p>
+</div>
+<script>
+function choose(n) {
+  const story = document.getElementById("story");
+  const chapter = document.getElementById("chapter");
+  const choices = document.getElementById("choices");
+  const ending = document.getElementById("ending");
+
+  if (n === 1) {
+    chapter.textContent = "Chapter 2: Getting Closer";
+    story.textContent = "You reply with a heart. They answer immediately.\\n\\n'I just care about you. I want to be the person you tell everything to.'\\n\\nYou feel excited, but a little unsure.";
+    choices.innerHTML = '<button onclick="choose(4)">Tell them how you feel 💗</button><button onclick="choose(5)">Set a boundary 🌷</button>';
+  } else if (n === 2) {
+    chapter.textContent = "Chapter 2: The Question";
+    story.textContent = "You ask why they want to know.\\n\\n'Because I like you,' they reply. 'But I know you can choose who you talk to.'\\n\\nYou wonder if you can trust them.";
+    choices.innerHTML = '<button onclick="choose(4)">Give them a chance 💕</button><button onclick="choose(5)">Take things slowly 🌙</button>';
+  } else if (n === 3) {
+    chapter.textContent = "Chapter 2: Silence";
+    story.textContent = "You put your phone away. The next morning, they apologize for being nosy.\\n\\n'I should trust you instead of questioning you,' they say.";
+    choices.innerHTML = '<button onclick="choose(5)">Talk honestly 💗</button><button onclick="choose(6)">Keep your distance 🌑</button>';
+  } else if (n === 4) {
+    chapter.textContent = "Your Ending";
+    story.textContent = "You open your heart and agree to learn about each other. You promise to be honest and respect each other's freedom.";
+    choices.innerHTML = '<button onclick="location.reload()">Play Again ↻</button>';
+    ending.textContent = "💕 A new beginning";
+  } else if (n === 5) {
+    chapter.textContent = "Your Ending";
+    story.textContent = "You explain that love needs trust, space, and respect. They listen. Together, you decide to build something healthier.";
+    choices.innerHTML = '<button onclick="location.reload()">Play Again ↻</button>';
+    ending.textContent = "🌷 Healthy Love Ending";
+  } else {
+    chapter.textContent = "Your Ending";
+    story.textContent = "You decide you need space. It hurts, but you choose your peace and leave room for a better future.";
+    choices.innerHTML = '<button onclick="location.reload()">Play Again ↻</button>';
+    ending.textContent = "🌙 Choosing Yourself Ending";
+  }
+}
+</script>
+</body>
+</html>
+￼Enter
